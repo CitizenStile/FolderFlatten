@@ -143,6 +143,7 @@ def main():
     svAction = tk.StringVar(root, "Copy")
     cbxAction = Combobox(fOptions, textvariable=svAction)
     cbxAction["values"] = ("Copy", "Move", "Symlink")
+    cbxAction["state"] = "disabled"
     lblClobber = tk.Label(fOptions, text="If file exists")
     svClobber = tk.StringVar(root, "Overwrite")
     cbxClobber = Combobox(fOptions, textvariable=svClobber)
@@ -155,22 +156,6 @@ def main():
     lblClobber.grid(row=0, column=2, sticky="w")
     cbxClobber.grid(row=0, column=3, sticky="w")
 
-    # fRow1 = tk.Frame(root)
-    # tk.Label(fRow1, text="Select  folder to flatten").pack()
-    # fRow2 = tk.Frame(root).pack()
-    # tbSrc = tk.Text(fRow2).pack
-    # btnSrcBrowse = tk.Button(fRow2)
-
-    # fRow1.pack()
-    # frame = tk.Frame(root)
-    # frame.pack(side=tk.LEFT)
-
-    # tk.Label(root, text="Select folder to flatten").pack()
-    # tk.Label(
-    #     root, text="Click the button to select a file", font=("Arial 18 bold")
-    # ).pack(pady=20)
-    # button = tk.Button(root, text="Select", command=select_src_folder)
-    # button.pack(ipadx=5, pady=15)
     root.mainloop()
 
     # init()
