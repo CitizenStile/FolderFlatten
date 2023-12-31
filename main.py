@@ -84,17 +84,17 @@ def doCopy(srcPth, dstPth):
 
 
 def select_folder(title="Select a folder"):
-    return filedialog.askdirectory(title)
+    return filedialog.askdirectory(title=title)
 
 
 def select_src_folder():
     global svSrc
-    svSrc.set(select_folder())
+    svSrc.set(select_folder("Select a source folder"))
 
 
 def select_dst_folder():
     global svDst
-    svDst.set(select_folder())
+    svDst.set(select_folder("Select a destination folder"))
 
 
 def main():
